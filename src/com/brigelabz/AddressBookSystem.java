@@ -7,6 +7,8 @@ public class AddressBookSystem {
         System.out.println("Welcome to Address Book");
         Contact contact = addContact();
         System.out.println(contact);
+        Contact editedContact = editContact(contact);
+        System.out.println(editedContact);
     }
 
     private static Contact addContact() {
@@ -30,5 +32,24 @@ public class AddressBookSystem {
 
         return contact;
 
+    }
+    private static Contact editContact(Contact contact) {
+        System.out.println("Edit first name");
+        contact.setFirstName(scanner.next());
+        System.out.println("Edit last name");
+        contact.setLastName(scanner.next());
+        System.out.println("Edit address");
+        contact.setAddress(scanner.next());
+        System.out.println("Edit city");
+        contact.setCity(scanner.next());
+        System.out.println("Edit state");
+        contact.setState(scanner.next());
+        System.out.println("Edit email");
+        contact.setEmail(scanner.next());
+        System.out.println("Edit phoneNumber");
+        contact.setPhoneNumber(scanner.next());
+        System.out.println("Edit zipCode");
+        contact.setZipCode(scanner.next());
+        return contact;
     }
 }
