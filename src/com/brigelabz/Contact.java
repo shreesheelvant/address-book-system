@@ -6,25 +6,31 @@ public class Contact {
     private String address;
     private String city;
     private String state;
-    private String zipCode;
-    private String phoneNumber;
     private String email;
+    private String phoneNumber;
+    private String zipCode;
 
-
-    public Contact(String firstName, String lastName, String address, String city, String state, String zipCode, String phoneNumber, String email) {
+    public Contact(String firstName, String lastName, String address, String city, String state, String email, String phoneNumber, String zipCode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.city = city;
         this.state = state;
-        this.zipCode = zipCode;
-        this.phoneNumber = phoneNumber;
         this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.zipCode = zipCode;
     }
 
+    public Contact() {
+
+    }
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -38,8 +44,6 @@ public class Contact {
     public String getAddress() {
         return address;
     }
-
-
 
     public void setAddress(String address) {
         this.address = address;
@@ -61,12 +65,12 @@ public class Contact {
         this.state = state;
     }
 
-    public String getZipCode() {
-        return zipCode;
+    public String getEmail() {
+        return email;
     }
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhoneNumber() {
@@ -77,12 +81,12 @@ public class Contact {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEmail() {
-        return email;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     @Override
@@ -93,19 +97,12 @@ public class Contact {
                 ", address='" + address + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", zipCode='" + zipCode + '\'' +
                 '}';
     }
 }
-
-
-
-
-
-
-
 
 
 
